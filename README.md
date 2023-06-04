@@ -8,6 +8,7 @@ React:
 Springboot:
 1. Run the springboot application make sure the port number is 8080.
 
-id & password for aplication login
+id & password for login
+
 id: admin
 password: Password@1
