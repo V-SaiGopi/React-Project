@@ -7,6 +7,8 @@ import { ToastContainer } from 'react-toastify';
 import { Provider } from 'react-redux';
 import Store from './Redux/Store';
 import Login from './Component/Login';
+import SignUp from "./Component/Signup"
+import ForgotPassword from './Component/ForgotPassword';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />}></Route>
+          <Route path='/signup' element={<SignUp />}></Route>
+          <Route path='/forgotpassword' element={<ForgotPassword />}></Route>
           <Route path='/user' element={<Userlisting></Userlisting>}></Route>
           <Route path='/user/add' element={<Adduser></Adduser>}></Route>
           <Route path='/user/edit/:code' element={<Updateuser></Updateuser>}></Route>

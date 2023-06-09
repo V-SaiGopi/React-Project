@@ -22,17 +22,6 @@ public class EmployeeController {
     private List<Employee> employees;
 
     public EmployeeController() {
-        employees = new ArrayList<>();
-        employees.add(new Employee(1L, "John Doe", "M", LocalDate.of(1990, 5, 15), 50000, "HR"));
-        employees.add(new Employee(2L, "Jane Smith", "F", LocalDate.of(1985, 9, 20), 60000, "Sales"));
-        employees.add(new Employee(3L, "Robert Johnson", "M", LocalDate.of(1982, 12, 10), 55000, "HR"));
-        employees.add(new Employee(4L, "Emily Brown", "F", LocalDate.of(1992, 8, 25), 52000, "Accounts"));
-        employees.add(new Employee(5L, "Michael Wilson", "M", LocalDate.of(1991, 3, 5), 58000, "Sales"));
-        employees.add(new Employee(6L, "Emma Davis", "F", LocalDate.of(1989, 6, 18), 59000, "Sales"));
-        employees.add(new Employee(7L, "William Taylor", "M", LocalDate.of(1987, 11, 30), 53000, "HR"));
-        employees.add(new Employee(8L, "Olivia Clark", "F", LocalDate.of(1993, 4, 12), 54000, "Accounts"));
-        employees.add(new Employee(9L, "James Anderson", "M", LocalDate.of(1984, 2, 8), 57000, "HR"));
-        employees.add(new Employee(10L, "Sophia Rodriguez", "F", LocalDate.of(1988, 7, 22), 51000, "Sales"));
     }
 
     @GetMapping

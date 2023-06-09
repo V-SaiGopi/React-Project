@@ -9,17 +9,17 @@
   flex-direction: column;
   min-height: 50vh;
   align-items: center;
-  
+
 }
 
-  label {
-      text-align: left;
-      padding: 0.25rem 0;
-  }
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+}
 
-  input {
-      margin: 0.5rem 0;
-  }
+input {
+  margin: 0.5rem 0;
+}
 
 .form-login {
   position: relative;
@@ -48,6 +48,7 @@ span {
 
 .container {
   padding: 28px;
+  width: fit-content;
 }
 
 .dash-content {
@@ -59,6 +60,192 @@ span {
   background-position: center;
 }
 
-.form-div table tr th, table tr td {
+.form-div table tr th,
+table tr td {
   padding: 7px;
+}
+
+.context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3yN2DArirFW6YnOn0TM5ZrwciuK_brWrqlvSiPG_tB-cCyQfG6ykWtqRvHnPoVUAz0v0&usqp=CAU");
+  background-size: cover;
+}
+
+.contain {
+  width: 400px;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-group {
+  margin-bottom: 20px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.error {
+  font-size: 14px;
+}
+
+.label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  color: #aaa;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding-left: 30px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f7f7f7;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-link {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+.form-login {
+  animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-signup {
+  animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.context {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/013/019/351/original/protect-employee-data-concept-design-template-with-white-glyph-icons-infographics-with-editable-flat-pictograms-on-abstract-background-illustration-for-ad-web-banner-business-presentation-vector.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.signup-link {
+  color: #ff5722;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-link {
+  color: #12b112;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-link {
+  color: #03a9f4;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+
+h2 {
+  font-weight: bolder;
+  color: rgb(253, 250, 250);
+}
+
+.fixed-top {
+  color: white;
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.user-icon {
+  color: #0b0909;
+  font-size: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  padding: 8px;
 }

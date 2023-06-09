@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FetchUserList, Removeuser } from "../Redux/Action";
-import './Login.css'
+
 
 const Userlisting = (props) => {
     const navigate = useNavigate();
@@ -11,9 +11,9 @@ const Userlisting = (props) => {
         props.loaduser();
     }, [])
 
-    const handledelete = (code) => {
+    const handledelete = (index) => {
         if (window.confirm('Do you want to remove?')) {
-            props.removeuser(code);
+            props.removeuser(index);
             toast.success('User removed successfully.')
             props.loaduser();
         }
@@ -30,8 +30,7 @@ const Userlisting = (props) => {
 
     return (
         props.user.loading ? <div><h2>Loading...</h2></div> :
-            props.user.errmessage ? <div><h2>{props.user.errmessage}</h2></div> :
-
+        props.user.errmessage ? <div><h2>{props.user.errmessage}</h2></div> :
                 <div className="dash-content">
                     <div className="container" style={{ color: 'black' }}>
                         <div className='btn-group btn-group-lg d-flex gap-2 mb-3' role="group" aria-label="...">
@@ -55,9 +54,9 @@ const Userlisting = (props) => {
                                 </thead>
                                 <tbody>
                                     {
-                                        props.user.userlist && props.user.userlist.map((item) => (
-                                            <tr key={item.id}>
-                                                <td>{item.id}</td>
+                                        props.user.userlist && props.user.userlist.map((item,index) => (
+                                            <tr key={index}>
+                                                <td>{index + 1}</td>
                                                 <td>{item.name}</td>
                                                 <td>{item.sex}</td>
                                                 <td>{item.dob}</td>

@@ -28,7 +28,7 @@ const Updateuser = () => {
 
     useEffect(() => {
         dispatch(FetchUserObj(code));
-    }, [])
+    }, [code, dispatch])
 
     useEffect(() => {
         if (userobj) {
@@ -74,11 +74,28 @@ const Updateuser = () => {
                             <div className="col-lg-12">
                                 <div className="form-group">
                                     <label>Sex</label>
-                                    <select value={sex || ''} onChange={e => sexchange(e.target.value)} className="form-control" required>
-                                        <option value={''}>None</option>
-                                        <option value={'M'}>M</option>
-                                        <option value={'F'}>F</option>
-                                    </select>
+                                    <div>
+                                        <label>
+                                            <input
+                                                type="radio"
+                                                name="sex"
+                                                value="M"
+                                                checked={sex === "M"}
+                                                onChange={e => sexchange(e.target.value)}
+                                            />
+                                            M
+                                        </label>
+                                        <label style={{ marginLeft: "20px" }}>
+                                            <input
+                                                type="radio"
+                                                name="sex"
+                                                value="F"
+                                                checked={sex === "F"}
+                                                onChange={e => sexchange(e.target.value)}
+                                            />
+                                            F
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-lg-12">

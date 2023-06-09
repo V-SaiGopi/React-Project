@@ -2,27 +2,47 @@ package com.example.backend.model;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "employees")
 public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+    @Column(name = "id")
     private Long id;
+    
+    @Column(name = "name")
     private String name;
+    
+    @Column(name = "sex")
     private String sex;
+    
+    @Column(name = "dob")
     private LocalDate dob;
+    
+    @Column(name = "salary")
     private double salary;
+    
+    @Column(name = "department")
     private String department;
 
     public Employee() {
     }
 
-    public Employee(Long id, String name, String sex, LocalDate dob, double salary, String department) {
-        this.id = id;
+    public Employee(String name, String sex, LocalDate dob, double salary, String department) {
         this.name = name;
         this.sex = sex;
         this.dob = dob;
         this.salary = salary;
         this.department = department;
     }
-
-    // Getters and Setters
 
     public Long getId() {
         return id;
@@ -39,7 +59,7 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getSex() {
         return sex;
     }
