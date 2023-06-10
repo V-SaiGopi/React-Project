@@ -99,7 +99,7 @@ const Signup = () => {
             <form className="signup" onSubmit={formSubmitter}>
               <div className="signup-header">
                 <FontAwesomeIcon icon={faUserPlus} className="user-icon" />
-                <h2>Sign up</h2>
+                <h1>Sign up</h1>
               </div>
               <br />
               {error && (

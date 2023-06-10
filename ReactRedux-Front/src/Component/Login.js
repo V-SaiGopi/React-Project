@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
@@ -49,6 +50,7 @@ const Login = () => {
             if (response.ok) {
                 // Successful login
                 navigate("/user");
+                toast.success("Logined successfully.");
                 console.log("Login successful");
             } else {
                 // Failed login
@@ -84,7 +86,7 @@ const Login = () => {
                         <form className="login" onSubmit={formSubmitter}>
                             <div className="login-header">
                                 <FontAwesomeIcon icon={faUserCircle} className="user-icon" />
-                                <h2>Login</h2>
+                                <h1>Login</h1>
                             </div><br />
                             {error && (
                                 <div

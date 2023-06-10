@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FetchUserObj, FunctionUpdateUser } from "../Redux/Action";
 import './Login.css'
+import { toast } from "react-toastify";
 
 
 const Updateuser = () => {
@@ -45,7 +46,8 @@ const Updateuser = () => {
         e.preventDefault();
         if (window.confirm('Do you want to Logout?')) {
             navigate('/')
-            window.location.reload();
+            toast.success("Logout success.");
+            // window.location.reload();
         }
     }
 

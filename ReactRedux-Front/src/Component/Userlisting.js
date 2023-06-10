@@ -24,7 +24,8 @@ const Userlisting = (props) => {
         e.preventDefault();
         if (window.confirm('Do you want to Logout?')) {
             navigate('/')
-            window.location.reload();
+            toast.success("Logout success.");
+            // window.location.reload();
         }
     }
 

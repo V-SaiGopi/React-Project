@@ -232,7 +232,11 @@ button {
 
 h2 {
   font-weight: bolder;
-  color: rgb(253, 250, 250);
+  color: rgb(1, 0, 0);
+}
+
+h1 {
+  color: white;
 }
 
 .fixed-top {

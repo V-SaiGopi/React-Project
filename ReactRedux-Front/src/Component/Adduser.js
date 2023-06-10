@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { FunctionAddUser } from "../Redux/Action";
+import { toast } from "react-toastify";
 
 const Adduser = () => {
     const [name, namechange] = useState('');
@@ -24,7 +25,8 @@ const Adduser = () => {
         e.preventDefault();
         if (window.confirm('Do you want to Logout?')) {
             navigate('/')
-            window.location.reload();
+            toast.success("Logout success.");
+            // window.location.reload();
         }
     }
 
@@ -60,7 +62,7 @@ const Adduser = () => {
                                                 name="sex"
                                                 value="M"
                                                 checked={sex === "M"}
-                                                onChange={e => sexchange(e.target.value)}
+                                                onChange={e => sexchange(e.target.value)} required
                                             />
                                             M
                                         </label>
