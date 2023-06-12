@@ -52,8 +52,17 @@ span {
 }
 
 .dash-content {
-  height: 850px;
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3yN2DArirFW6YnOn0TM5ZrwciuK_brWrqlvSiPG_tB-cCyQfG6ykWtqRvHnPoVUAz0v0&usqp=CAU);
+  height: 1000px;
+  background-image: url(https://cdn.cbeditz.com/cbeditz/preview/royal-sky-blue-gradient-background-wallpaper-full-hd-1-11614501820ypgyaybuyc.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.dash-contents {
+  height: 100vh;
+  background-image: url(https://cdn.cbeditz.com/cbeditz/preview/royal-sky-blue-gradient-background-wallpaper-full-hd-1-11614501820ypgyaybuyc.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -65,15 +74,6 @@ table tr td {
   padding: 7px;
 }
 
-.context {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3yN2DArirFW6YnOn0TM5ZrwciuK_brWrqlvSiPG_tB-cCyQfG6ykWtqRvHnPoVUAz0v0&usqp=CAU");
-  background-size: cover;
-}
-
 .contain {
   width: 400px;
   background-color: transparent;
@@ -83,7 +83,7 @@ table tr td {
 }
 
 .btn-group {
-  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .form-login {
@@ -105,6 +105,7 @@ table tr td {
 .label {
   font-size: 16px;
   margin-bottom: 5px;
+  font-weight: 100px;
 }
 
 .input-field {
@@ -132,7 +133,7 @@ input[type="password"] {
 }
 
 button {
-  height: 40px;
+  height: 45px;
   border-radius: 5px;
   border: none;
   background-color: #f7f7f7;
@@ -201,14 +202,14 @@ button {
 
 .signup-link {
   color: #ff5722;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 10px;
 }
 
 .login-link {
   color: #12b112;
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 16px;
+  margin-top: 15px;
 }
 
 .signup-link:hover {
@@ -221,14 +222,12 @@ button {
 
 .forgot-password-link {
   color: #03a9f4;
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 16px;
 }
 
 .forgot-password-link:hover {
   text-decoration: underline;
 }
-
 
 h2 {
   font-weight: bolder;
@@ -241,8 +240,13 @@ h1 {
 
 .fixed-top {
   color: white;
-  text-decoration: underline;
-  padding: 10px;
+  padding: 5px;
+  background-color: rgb(3, 70, 104);
+  font-weight: bold;
+}
+
+.fixed-top:hover {
+  border-style: outset;
 }
 
 .user-icon {

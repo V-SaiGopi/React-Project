@@ -27,9 +27,9 @@ const Signup = () => {
     return userId != null && userId.trim() !== "";
   };
 
-//   const isValidEmail = (email) => {
-//     return email != null && email.trim() !== "" && email.includes("@");
-//   };
+  const isValidEmail = (email) => {
+    return email != null && email.trim() !== "" && email.includes("@");
+  };
 
   const isValidPassword = (password) => {
     return (
@@ -51,10 +51,10 @@ const Signup = () => {
       return;
     }
 
-    // if (!isValidEmail(email)) {
-    //     setError("Please enter a valid email");
-    //     return;
-    // }
+    if (!isValidEmail(email)) {
+        setError("Please enter a valid email");
+        return;
+    }
 
     // Validate password
     if (!isValidPassword(password)) {
@@ -158,6 +158,7 @@ const Signup = () => {
               <button
                 className="text-decoration-none btn btn-sm btn-light"
                 type="submit"
+                style={{height: "35px"}}
               >
                 Sign up
               </button>

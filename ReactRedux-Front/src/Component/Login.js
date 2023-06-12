@@ -78,7 +78,7 @@ const Login = () => {
     };
 
     return (
-        <>
+        <div>
             <h1 className="fixed-top">Employee Management System</h1>
             <div className="context">
                 <div className="contain">
@@ -118,30 +118,30 @@ const Login = () => {
                                     onChange={handleChange}
                                 />
                             </div>
-                            <div className="signup-link">
-                                Don't have an account?{" "}
-                                <Link to="/signup" className="link">
-                                    Sign up
+                            <div className="forgot-password-link">
+                                <Link to="/forgotpassword" className="link">
+                                    Forgot password?
                                 </Link>
                             </div>
                             <br />
                             <button
                                 className="text-decoration-none btn btn-sm btn-light"
                                 type="submit"
+                                style={{height: "35px"}}
                             >
                                 Submit
                             </button>
-                            {/* <div className="signup-link">
+                            <div className="signup-link">
                                 Don't have an account?{" "}
                                 <Link to="/signup" className="link">
                                     Sign up
                                 </Link>
-                            </div> */}
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
