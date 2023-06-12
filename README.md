@@ -6,10 +6,7 @@ React:
 2. Then run the react application(npm start).
 
 Springboot:
-1. Run the springboot application make sure the port number is 8080.
-
-id & password for login
-
-id: admin
-
-password: Password@1
+1. Make sure the port number is 8080.
+2. Change the database id password according to your system.
+3. Create a Databse in your local with name "employees_data"
+4. Run the springboot application.
