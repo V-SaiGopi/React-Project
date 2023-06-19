@@ -37,6 +37,7 @@ public class EmployeeService {
         existingEmployee.setDob(updatedEmployee.getDob());
         existingEmployee.setSalary(updatedEmployee.getSalary());
         existingEmployee.setDepartment(updatedEmployee.getDepartment());
+        existingEmployee.setImage(updatedEmployee.getImage());
 
         return employeeRepository.save(existingEmployee);
     }
@@ -54,9 +55,6 @@ public class EmployeeService {
         employeeRepository.saveAll(remainingEmployees);
         
         return true;
-    }
-
-    
+    }  
 }
-
 

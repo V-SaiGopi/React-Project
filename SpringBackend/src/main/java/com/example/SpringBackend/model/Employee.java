@@ -26,15 +26,20 @@ public class Employee {
     @Column(name = "department")
     private String department;
 
+    @Lob
+    @Column(name = "image", columnDefinition = "LONGBLOB")
+    private byte[] image;
+
     public Employee() {
     }
 
-    public Employee(String name, String sex, LocalDate dob, double salary, String department) {
+    public Employee(String name, String sex, LocalDate dob, double salary, String department, byte[] image) {
         this.name = name;
         this.sex = sex;
         this.dob = dob;
         this.salary = salary;
         this.department = department;
+        this.image = image;
     }
 
     public long getId() {
@@ -83,6 +88,14 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }
 
